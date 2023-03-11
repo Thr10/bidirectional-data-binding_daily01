@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专高6-日考1</title>
+</head>
+<body>
+    <div style="border: 1px solid">
+        <div >View:</div>
+        <div>
+            <input type="number" id="foo">
+        </div>
+    </div>
+
+    <div style="border: 1px solid; margin-top: 20px;">
+        <div>Modal:</div>
+        <div>
+            <button onclick="handleAddOneBtnClicked()">data.num + 1</button>
+        </div>
+    </div>
+   
+    <div style="border: 1px solid; margin-top: 20px;">
+        <div>检测Modal中的数据是否跟着View层的变化而变化: </div> 
+        <button  onclick="handleConsoleBtnClicked()">打印 data.num</button>
+    </div>
+    
+    <script>
+        var data = {
+            _num: 0,
+        };
+        Object.defineProperty(data, 'num', {
+            // ------------ 答题区域 A ------------
+            // |                                ｜
+            // |                                ｜
+            // |                                ｜
+            // ----------------------------------
+        })
+        // 初始化
+        data.num = 0;
+    </script>
+    <script>
+        const inputEle = document.getElementById("foo");
+        inputEle.addEventListener('change', function handleValueChanged (e) {
+             // ------------ 答题区域 B ------------
+            // |                                ｜
+            // |                                ｜
+            // |                                ｜
+            // ----------------------------------
+        })
+    </script>
+    <script>
+        function handleAddOneBtnClicked () {
+            data.num = data.num + 1;
+        }
+
+        function handleConsoleBtnClicked () {
+            alert(`当前data.num: ${data.num}`)
+        }
+    </script>
+    
+</body>
+</html>
+
